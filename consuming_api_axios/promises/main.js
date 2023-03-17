@@ -3,7 +3,6 @@ const url = 'http://localhost:5500/api'
 function getUsers() {
     axios.get(url)
     .then(response=>{
-        // Eu usei a variavel criado na div e estou pasasndo por meio da DOM o response da API 
         apiResult.textContent = JSON.stringify(response.data)
     })
     .catch(error=>console.error(error))
@@ -48,8 +47,10 @@ function deleteUser(id){
     .catch(error=>console.error(error))
 }
 
+// -------------------------------------------------------------
+
 const userUpdated = {
-    name:"Lucia Jacinta",
+    name:"Lucia",
     avatar:"https://picsum.photos/200/300",
     city: "Russas",
 }
@@ -58,7 +59,7 @@ const userUpdated = {
 // deleteUser(1)
 // deleteUser(1)
 getUsers()
-getUser(2)
+getUser(1)
 
 const newUser = {
     name:"Vinícius",
